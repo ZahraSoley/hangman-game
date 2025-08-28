@@ -1,32 +1,17 @@
-// const HEAD = <div className="w-14 h-14 rounded-full border-solid border-black border-8 absolute right-[-33px] top-[47px]"></div>
-// const BODY = <div className="h-25 w-2 bg-black absolute right-[-8px] top-[103px]"></div>
-// const RIGHTARM = <div className="h-2 w-25 bg-black absolute right-[-108px] top-[133px] rotate-[-30deg] origin-bottom-left"></div>
-// const LEFTARM = <div className="h-2 w-25 bg-black absolute right-[0px] top-[133px] rotate-[30deg] origin-bottom-right"></div>
-// const LEFTLEG = <div className="h-2 w-25 bg-black absolute right-[-8px] top-[196px] rotate-[-60deg] origin-bottom-right"></div>
-// const RIGHTLEG = <div className="h-2 w-25 bg-black absolute right-[-100px] top-[196px] rotate-[60deg] origin-bottom-left"></div>
-// const HangmanDrawing = () => {
-//     return (
-//         <div className="relative ">
-//             {HEAD}
-//             {BODY}
-//             {RIGHTARM}
-//             {LEFTARM}
-//             {RIGHTLEG}
-//             {LEFTLEG}
-//             <div className="w-2 h-12 bg-black absolute left-70"></div>
-//             <div className="w-40 h-2 bg-black ml-30"></div>
-//             <div className="h-100 w-2 bg-black ml-30"></div>
-//             <div className="h-2 w-60 bg-black"></div>
-//         </div>
-//     )
-// }
-
-// export default HangmanDrawing
-
-
 const HangmanDrawing = () => {
   return (
-    <div>HangmanDrawing</div>
+    <div className="relative">
+      <div className="bg-black w-30 h-2 absolute left-72 top-40 rotate-[-50deg] origin-bottom-left"></div>
+      <div className="bg-black w-30 h-2 absolute left-40 top-40 origin-bottom-right rotate-[50deg]"></div>
+      <div className="bg-black w-30 h-2 absolute left-70 top-68 rotate-[50deg] origin-bottom-left"></div>
+      <div className="bg-black w-30 h-2 absolute left-42 top-68 origin-bottom-right rotate-[-50deg]"></div>
+      <div className="bg-black w-2 h-40 absolute left-70 top-30"></div>
+      <div className="border-black w-20 h-20 rounded-full border-8 absolute left-61 top-10"></div>
+      <div className="bg-black w-2 h-10 ml-70 absolute "></div>
+      <div className="bg-black w-30 h-2 ml-40"></div>
+      <div className="bg-black h-100 w-2 ml-40"></div>
+      <div className="bg-black w-100 h-2 "></div>
+    </div>
   )
 }
 
