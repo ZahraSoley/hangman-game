@@ -1,7 +1,7 @@
 
 import Letters from './Letters.json'
 
-const Keyboard = ({ handleUserWord, visibility, setVisibility, userLetter }) => {
+const Keyboard = ({ handleUserWord }) => {
 
     return (
         <>

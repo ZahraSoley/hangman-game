@@ -7,11 +7,19 @@ import HangmanWord from "./HangmanWord"
 import Keyboard from "./Keyboard"
 
 export default function App() {
-  const [userLetter, setUserLetter] = useState([])
   const [rndWord, setRndWord] = useState(wordList[Math.floor(Math.random() * wordList.length)])
+  const [userLetter, setUserLetter] = useState([])
+  const [manarr, setManarr] = useState([])
 
   const handleUserWord = (letter) => {
-    setUserLetter((prev) => prev.includes(letter) || prev.length > 3 ? prev : [...prev, letter])
+    setUserLetter((prev) => prev.includes(letter) || prev.length >= 9 ? prev : [...prev, letter])
+  }
+
+  const handleman = () => {
+    const rndWordLtr = rndWord.split('')
+    userLetter.map((ltr) => {
+      rndWordLtr.includes(ltr)?null:setManarr(prev=>[...prev,prev+1])
+    })
   }
 
   useEffect(() => {

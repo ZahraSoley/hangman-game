@@ -1,4 +1,7 @@
+
+
 const HangmanDrawing = () => {
+
   return (
     <div className="relative">
       <div className="bg-black w-30 h-2 absolute left-72 top-40 rotate-[-50deg] origin-bottom-left"></div>
