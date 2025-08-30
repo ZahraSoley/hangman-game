@@ -1,7 +1,8 @@
 
+import clsx from 'clsx'
 import Letters from './Letters.json'
 
-const Keyboard = ({ handleUserWord }) => {
+const Keyboard = ({ handleUserWord, rndWord, userLetter }) => {
 
     return (
         <>
@@ -13,8 +14,12 @@ const Keyboard = ({ handleUserWord }) => {
                             return (
                                 <button
                                     key={letter}
-                                    onClick={() => handleUserWord(letter)}
-                                    className='bg-blue-100 text-3xl font-bold uppercase aspect-square border-2 rounded cursor-pointer hover:bg-sky-950 hover:text-sky-100'>
+                                    // point
+                                    disabled={userLetter.includes(letter)}
+                                    onClick={() => { handleUserWord(letter) }}
+                                    className={clsx('bg-blue-100 text-3xl font-bold uppercase aspect-square border-2 rounded cursor-pointer hover:bg-sky-950 hover:text-sky-100'
+                                        , userLetter.includes(letter) && 'bg-sky-950 text-sky-100'
+                                        , userLetter.includes(letter) && !rndWord.split('').includes(letter) && 'opacity-20')}>
                                     {letter}
                                 </button>
                             )

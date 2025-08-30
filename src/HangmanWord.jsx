@@ -5,8 +5,8 @@ const HangmanWord = ({ rndWord, userLetter }) => {
 
     return (
         <div className="flex gap-5">
-            {rndWordLtr.map(ltr =>
-                <span className="font-bold text-4xl border-b-6 w-8">
+            {rndWordLtr.map((ltr,index) =>
+                <span key={index} className="font-bold text-4xl border-b-6 w-8">
                     {/* point */}
                     <span className={userLetter.includes(ltr) ? 'visible' : 'invisible'}>{ltr}</span>
                 </span>)
