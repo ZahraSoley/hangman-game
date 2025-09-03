@@ -1,9 +1,9 @@
 import './App.css'
 import { useEffect } from "react"
 import Header from './components/Header'
-import HangmanDrawing from "./components/HangmanDrawing"
-import HangmanWord from "./components/HangmanWord"
-import Keyboard from "./components/Keyboard"
+import HangmanDrawing from './components/HangmanDrawing'
+import HangmanWord from './components/HangmanWord'
+import Keyboard from './components/Keyboard'
 import clsx from 'clsx'
 import UseLogic from './hooks/UseLogic'
 
@@ -13,7 +13,7 @@ export default function App() {
 
   useEffect(() => {
     console.log("Updated userLetter", userLetter, '    counter:', wrongCounter)
-  }, [userLetter])
+  }, [userLetter,wrongCounter])
 
   useEffect(() => {
     console.log('random word is:', rndWord)

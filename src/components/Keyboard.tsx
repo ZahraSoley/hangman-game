@@ -1,8 +1,15 @@
-
 import clsx from 'clsx'
-import Letters from '../data/Letters.json'
+import keyLetters from '../data/keyLetters.json'
 
-const Keyboard = ({ handleUserWord, rndWord, userLetter }) => {
+const Letters = keyLetters as string[]
+
+interface KeyboardType {
+    handleUserWord: (letter: string) => void,
+    rndWord: string,
+    userLetter: string[]
+}
+
+const Keyboard = ({ handleUserWord, rndWord, userLetter }: KeyboardType) => {
 
     return (
         <>

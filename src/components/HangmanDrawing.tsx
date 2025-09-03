@@ -1,7 +1,8 @@
-
 import clsx from "clsx"
 
-const HangmanDrawing = ({ wrongCounter }) => {
+interface drawingType { wrongCounter: number }
+
+const HangmanDrawing = ({ wrongCounter }: drawingType) => {
 
   return (
     <div className="relative">

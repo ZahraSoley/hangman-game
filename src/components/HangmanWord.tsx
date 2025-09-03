@@ -1,5 +1,9 @@
+interface wordType {
+    rndWord: string,
+    userLetter: string[]
+}
 
-const HangmanWord = ({ rndWord, userLetter }) => {
+const HangmanWord = ({ rndWord, userLetter }: wordType) => {
     const rndWordLtr = rndWord.split('')
 
     return (
